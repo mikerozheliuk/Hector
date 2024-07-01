@@ -3,12 +3,24 @@
   @@include('html/_head.htm',{ "title":"HomePage" })
   <body>
     <div class="wrapper">
-      @@include('html/_header.htm',{})
       <main class="page">
-        <section class="main">
-          <div class="main__container">
-            <div class="main__content">
-              <div class="main__title"></div>
+        <section class="page__main main-page">
+          @@include('html/_header.htm',{})
+          <div class="main-page__container">
+            <div class="main-page__title">МУЖСКАЯ</div>
+            <div class="main-page__title main-page__title_right">КОЛЛЕКЦИЯ</div>
+            <div class="main-page__subtitle">
+              Распродажа коллекций со скидками до 50%, доставка до вашего склада
+            </div>
+            <div class="main-page__button">ПОДРОБНЕЕ</div>
+            <div class="main-page__count">
+              <a href="" class="main-page__arrow-left">
+                <img src="@img/icons/arrow.svg" alt="arrow-left" />
+              </a>
+              <span>02</span>
+              <a href="" class="main-page__arrow-right">
+                <img src="@img/icons/arrow.svg" alt="arrow-right" />
+              </a>
             </div>
           </div>
         </section>
