@@ -1,3 +1,137 @@
 //====================================================================================================
 
 //====================================================================================================
+.follow {
+  background-color: #f6f6f6;
+
+  @include adaptiveValue("padding-top", 50, 25);
+  @include adaptiveValue("padding-bottom", 60, 25);
+
+  // .follow__container
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: toRem(1294)) {
+      flex-direction: column;
+      gap: toRem(30);
+    }
+  }
+
+  // .follow__form
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // .follow__title
+
+  &__title {
+    color: #0f0f0f;
+
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.1px;
+
+    padding-bottom: toRem(40);
+  }
+
+  // .follow__label
+
+  &__label {
+    padding: toRem(25) toRem(195) toRem(25) toRem(30);
+    display: flex;
+    gap: toRem(12);
+    background: transparent;
+    border: 2px solid #bfbfbf;
+    height: 100%;
+
+    max-width: toRem(450);
+  }
+
+  // .follow__input
+
+  &__input {
+    font-size: 24px;
+  }
+
+  // .follow__button
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: toRem(25) toRem(150);
+    max-width: toRem(450);
+
+    background-color: #0f0f0f;
+    border: 2px solid #0f0f0f;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    &:hover {
+      background-color: transparent;
+      color: #0f0f0f;
+    }
+  }
+
+  // .follow__social
+}
+.social-follow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // .social-follow__items
+
+  &__items {
+    @include adaptiveValue("padding-top", 85, 35);
+    display: flex;
+    gap: toRem(59);
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .social-follow__item
+
+  &__item {
+    max-width: toRem(52);
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s;
+      fill: #878787;
+
+      &:hover {
+        fill: #1f1818;
+      }
+    }
+  }
+
+  // .social-follow__link
+
+  &__link {
+  }
+
+  &__border {
+    background-color: #878787;
+    height: 65px;
+    width: 2.4px;
+  }
+}
