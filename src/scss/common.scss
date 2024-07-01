@@ -8,3 +8,13 @@
   font-weight: 200;
   line-height: 100%;
 }
+
+.text {
+  color: var(--Black-1, #0f0f0f);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%; /* 24px */
+  text-transform: uppercase;
+}
