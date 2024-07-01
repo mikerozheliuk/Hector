@@ -619,6 +619,8 @@
 
 //====================================================================================
 .sale {
+  @include adaptiveValue("padding-top", 137, 90);
+  @include adaptiveValue("padding-bottom", 130, 80);
   // .sale__container
 
   &__container {

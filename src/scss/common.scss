@@ -18,3 +18,13 @@
   line-height: 100%; /* 24px */
   text-transform: uppercase;
 }
+
+link {
+  @media (max-width: $mobileSmall) {
+    width: toRem(20);
+    height: toRem(20);
+    img {
+      width: 100%;
+    }
+  }
+}
