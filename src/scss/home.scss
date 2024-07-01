@@ -616,3 +616,151 @@
     color: #fff;
   }
 }
+
+//====================================================================================
+.sale {
+  // .sale__container
+
+  &__container {
+  }
+
+  // .sale__wrap
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: toRem(17);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  // .sale__title
+
+  &__title {
+  }
+
+  // .sale__text
+
+  &__text {
+  }
+
+  // .sale__items
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: toRem(90);
+
+    @media (max-width: $mobile) {
+      gap: toRem(60);
+    }
+
+    @media (max-width: $tablet) {
+      gap: toRem(60);
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      text-align: center;
+    }
+  }
+}
+
+.item-sale {
+  overflow: hidden;
+  position: relative;
+
+  // .item-sale__image
+
+  &__image {
+    height: 600px;
+    overflow: hidden;
+    width: 100%;
+
+    padding-bottom: toRem(32);
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    overflow: initial;
+  }
+
+  // .item-sale__info
+
+  &__info {
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    bottom: -117px;
+    color: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    height: 262px;
+    justify-content: space-between;
+    left: 56px;
+    padding: 32px 24px;
+    position: absolute;
+    transition: all 0.5s;
+    width: 100%;
+  }
+
+  // .item-sale__row
+
+  &__row {
+  }
+
+  // .item-sale__title
+
+  &__title {
+    color: var(--Black-1, #0f0f0f);
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 36px */
+
+    padding-bottom: toRem(12);
+  }
+
+  // .item-sale__text
+
+  &__text {
+    color: #000;
+
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%;
+
+    padding-bottom: toRem(60);
+  }
+
+  // .item-sale__link
+
+  &__link {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  // .item-sale__more
+
+  &__more {
+    color: var(--Black-1, #0f0f0f);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%; /* 31.2px */
+  }
+}
