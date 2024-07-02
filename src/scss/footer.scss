@@ -88,9 +88,11 @@
   }
 
   &__tel {
+    padding-bottom: toRem(50);
     color: #fff;
-    font-family: Montserrat;
-    font-size: 25px;
+
+    @include adaptiveValue("font-size", 25, 16);
+
     font-weight: 400;
     line-height: 50px; /* 166.667% */
     letter-spacing: 2.1px;
@@ -107,6 +109,29 @@
   // .social-footer__items
 
   &__items {
+    display: flex;
+    gap: toRem(27);
+  }
+
+  &__border {
+    background: rgba(196, 196, 196, 0.25);
+    width: 1px;
+    height: 28px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      filter: brightness(1.2);
+    }
   }
 }
 
@@ -123,6 +148,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: $tablet) {
+      text-align: center;
+      flex-direction: column;
+    }
   }
 
   &__copy {
@@ -137,6 +167,11 @@
     font-weight: 400;
     line-height: 40px; /* 285.714% */
     letter-spacing: 0.98px;
+
+    @media (max-width: $tablet) {
+      text-align: center;
+      flex-direction: column;
+    }
   }
 
   // .down-footer__text
